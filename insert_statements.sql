@@ -1,3 +1,41 @@
+drop table Countries;
+drop table UN_Data;
+drop table World_Bank_Data;
+purge recyclebin;
+
+-- Create Countries table
+CREATE TABLE Countries (
+    country_id NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    name VARCHAR2(100) UNIQUE NOT NULL
+);
+
+grant select on Countries to public;
+
+-- Create World Bank Data table
+CREATE TABLE World_Bank_Data (
+    wb_id NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    country_id NUMBER NOT NULL,
+    health_expenditure NUMBER,
+    gdp_per_capita NUMBER,
+    immunization_rate NUMBER,
+    internet_usage NUMBER,
+    urban_population NUMBER,
+    FOREIGN KEY (country_id) REFERENCES Countries(country_id)
+);
+
+grant select on World_Bank_Data to public;
+
+-- Create UN Data table
+CREATE TABLE UN_Data (
+    un_id NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    country_id NUMBER NOT NULL,
+    crude_death_rate NUMBER,
+    life_expectancy NUMBER,
+    FOREIGN KEY (country_id) REFERENCES Countries(country_id)
+);
+
+grant select on UN_Data to public;
+
 -- Insert unique countries into Countries table
 INSERT INTO Countries (name) VALUES ('Afghanistan');
 INSERT INTO Countries (name) VALUES ('Albania');
