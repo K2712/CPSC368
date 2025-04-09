@@ -12,7 +12,7 @@ import seaborn as sns <br>
 insert_statements.sql -> Creates tables based the schema and inserts values to the tables <br>
 query.sql -> The SQL query used in order to join the tables together <br>
 joined_data.csv -> The csv file obtained after joining the tables and exporting it from SQL <br>
-Visualisation.ipynb -> The python code to create the visualisations for the project, and implement the methodology <br>
+visualisation.ipynb -> The python code to create the visualisations for the project, and implement the methodology <br>
 
 ### The location of the SQL queries
 In the query.sql file
@@ -24,7 +24,7 @@ In the query.sql file
 3. use wget https://raw.githubusercontent.com/K2712/CPSC368/refs/heads/main/insert_statements.sql download the file to your account on the department server.
 4. From the directory where you put insert_statements.sql, log in to SQL*Plus by typing the command: aqlplus ora_CWLid@stu
 5. Once SQL*Plus is started, you will see the prompt SQL>. Please type start bookbiz.sql;
-6. Please fun the following lines:
+6. Please fun the following lines: <br>
 SET COLSEP ',' <br>
 SET PAGESIZE 0 <br>
 SET TRIMSPOOL ON <br>
@@ -34,7 +34,7 @@ SET ECHO OFF <br>
 
 SPOOL joined_data.csv <br>
 
-(them please c
+(them please c <br>
 
 SPOOL OFF <br>
 
