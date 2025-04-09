@@ -34,7 +34,7 @@ SET ECHO OFF <br>
 
 SPOOL joined_data.csv <br>
 
-(them please c <br>
+(Please insert the sql query here from query.sql, specifically lines 2 to 13) <br>
 
 SPOOL OFF <br>
 
