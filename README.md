@@ -23,7 +23,7 @@ In the query.sql file
 2. Use SSH to connect to remote.students.cs.ubc.ca using your CWL ID: ssh cwl@remote.students.cs.ubc.ca
 3. use wget https://raw.githubusercontent.com/K2712/CPSC368/refs/heads/main/insert_statements.sql download the file to your account on the department server.
 4. From the directory where you put insert_statements.sql, log in to SQL*Plus by typing the command: aqlplus ora_CWLid@stu
-5. Once SQL*Plus is started, you will see the prompt SQL>. Please type start bookbiz.sql;
+5. Once SQL*Plus is started, you will see the prompt SQL>. Please type start insert_statements.sql;
 6. Please fun the following lines: <br>
 SET COLSEP ',' <br>
 SET PAGESIZE 0 <br>
